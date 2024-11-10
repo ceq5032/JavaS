@@ -1,4 +1,4 @@
-canvas#bg{
+canvas{
   position:fixed;
   top: 0;
   left: 0;
@@ -54,7 +54,7 @@ section{
 
 blockquote{
   padding: 0;
-  gird-column: 2 / span 9;
+  grid-column: 2 / span 9;
   margin: 2rem;
 }
 
