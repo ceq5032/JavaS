@@ -1,0 +1,60 @@
+canvas#bg{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  z-index: 1;
+}
+
+main {
+  color: whitesmoke;
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  padding: 120px 0;
+
+
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+}
+
+h1, h2, h3, blockquote {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+header {
+  background: white;
+  grid-column: 2 / span 5;
+  font-size: 4rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+section{
+  grid-column: 2 / 8;
+  padding: 1rem;
+  background: black;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+blockquote{
+  padding: 0;
+  gird-column: 2 / span 9;
+  margin: 2rem;
+}
+
