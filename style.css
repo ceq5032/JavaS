@@ -1,4 +1,4 @@
-canvas{
+canvas#bg{
   position:fixed;
   top: 0;
   left: 0;
@@ -56,5 +56,14 @@ blockquote{
   padding: 0;
   grid-column: 2 / span 9;
   margin: 2rem;
+}
+@media screen and (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  header, section, blockquote {
+    grid-column: 1 / -1;
+  }
 }
 

@@ -149,6 +149,3 @@ function animate() {
 }
 
 animate();
-
-
-
