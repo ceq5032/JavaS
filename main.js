@@ -37,7 +37,7 @@ const loader = new FontLoader();
 loader.load('https://threejs.org/examples/fonts/optimer_regular.typeface.json', function (font) {
     console.log("Font loaded successfully");
 
-    const textGeometry = new TextGeometry('Welcome!', {
+    const textGeometry = new TextGeometry('Whats Up!', {
         font: font,
         size: 2,
         height: 1,
@@ -99,7 +99,7 @@ const tex = new THREE.Mesh(
 );
 scene.add(tex);
 
-tex.position.z = 60;
+tex.position.z = 55;
 tex.position.setX(-15);
 
 // Move camera on scroll
