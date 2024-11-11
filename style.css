@@ -1,10 +1,25 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: left;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 canvas#bg{
   position:fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
+  border: solid 1px red;
+
 }
 
 .overlay {
@@ -15,10 +30,10 @@ canvas#bg{
   z-index: 1;
 }
 
-main {
+body {
+  width: 100vh;
   color: whitesmoke;
   position: absolute;
-  width: 100%;
   margin: 0 auto;
   padding: 120px 0;
 
@@ -36,30 +51,55 @@ h1, h2, h3, blockquote {
 
 
 header {
-  background: white;
+  background: transparent;
   grid-column: 2 / span 5;
   font-size: 4rem;
   padding: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 20rem;
 }
 
 section{
   grid-column: 2 / 8;
   padding: 1rem;
-  background: black;
-  font-size: 1.25rem;
+  background: rgba(255, 255, 255, 0.25);;
+  font-size: 1.5rem;
   line-height: 1.5;
-  margin-bottom: 2rem;
+  margin-top: 10rem;
+  margin-bottom:30rem;
 }
 
 blockquote{
   padding: 0;
   grid-column: 2 / span 9;
-  margin: 2rem;
+  margin: 20rem;
+  font-size: 4rem;
 }
+
+.project{
+  grid-column: 2 / 8;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.25);;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-top: 10rem;
+  margin-bottom:30rem;
+}
+
+
+
+.right{
+  grid-column: 2 / 8;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.25);;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-top: 10rem;
+  margin-bottom:30rem;
+}
+
 @media screen and (max-width: 768px) {
   main {
-    grid-template-columns: 1fr;
+    grid-template-columns: 4fr;
   }
 
   header, section, blockquote {

@@ -28,6 +28,8 @@ pointLight.position.set(5, 5, 5);
 const ambientLight = new THREE.AmbientLight(0xffffff, 5);
 scene.add(pointLight, ambientLight);
 
+renderer.render(scene, camera);
+
 // Define textMesh
 let textMesh;
 
@@ -88,11 +90,15 @@ chels.position.x = 5;
 
 // Sphere with texture
 const texTexture = new THREE.TextureLoader().load('images/texture.jpg');
+const normalTexture = new THREE.TextureLoader().load('images/texture2.jpg');
+
 const tex = new THREE.Mesh(
     new THREE.SphereGeometry(3, 32, 32),
-    new THREE.MeshStandardMaterial({ map: texTexture })
+    new THREE.MeshStandardMaterial({ map: texTexture,
+    normalMap: normalTexture })
 );
 scene.add(tex);
+
 tex.position.z = 60;
 tex.position.setX(-15);
 
@@ -100,20 +106,20 @@ tex.position.setX(-15);
 function moveCamera() {
     const t = document.body.getBoundingClientRect().top;
     torus.rotation.x += 0.05;
-    torus.rotation.y += 0.05;
+    torus.rotation.y += 0.005;
     torus.rotation.z += 0.05;
 
     chels.rotation.y += 0.05;
     chels.rotation.z += 0.05;
 
     tex.rotation.x += 0.05;
-    tex.rotation.y += 0.05;
+    tex.rotation.y += 0.005;
     tex.rotation.z += 0.05;
 
 
     if (textMesh) {
-        textMesh.rotation.x += 0.05;
-        textMesh.rotation.y += 0.05;
+        textMesh.rotation.x += 0.005;
+        textMesh.rotation.y += 0.005;
     }
 
     camera.position.z = t * -0.01;
