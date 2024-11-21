@@ -24,7 +24,7 @@ html{
   position: absolute;
 }
 
-canvas{
+#bg{
   position:fixed;
   width: 100vh;
   height: 100vh;
