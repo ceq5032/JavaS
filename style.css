@@ -14,20 +14,35 @@ html{
   -moz-osx-font-smoothing: grayscale;
 }
 
+.container {
+  position: relative;
+  width: 100vh;
+  height: 100vh;
+}
+
+.container canvas, .overlay{
+  position: absolute;
+}
+
 canvas{
   position:fixed;
   width: 100vh;
   height: 100vh;
-  border: solid 1px red;
 
 }
 
 .overlay {
-  position: absolute;
   top: 20px;
   left: 20px;
   color: whitesmoke;
   z-index: 1;
+}
+
+.grid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100px;
 }
 
 body {
@@ -36,14 +51,10 @@ body {
   position: absolute;
   margin: 0 auto;
   padding: 120px 0;
-
-
-  display: grid;
-  grid-template-columns: repeat(12,1fr);
 }
 
 h1, h2, h3, blockquote {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Gill Sans', sans-serif;
   font-weight: 700;
   font-style: normal;
 }
@@ -98,7 +109,7 @@ blockquote{
 }
 
 @media screen and (max-width: 768px) {
-  main {
+  body {
     grid-template-columns: 4fr;
   }
 
@@ -106,4 +117,3 @@ blockquote{
     grid-column: 1 / -1;
   }
 }
-

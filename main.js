@@ -4,19 +4,13 @@ import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
 import {GLTFLoader} from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/GLTFLoader.js';
 
-
-
-
-
-
-
-
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector('#bg'),
 });
 
+//to resize with screen
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 camera.position.setZ(30);
@@ -31,14 +25,14 @@ const torus = new THREE.Mesh(geometry, material);
 scene.add(torus);
 
 // Lighting setup
-const pointLight = new THREE.PointLight(0xffffff, 5);
-pointLight.position.set(5, 5, 5);
-const ambientLight = new THREE.AmbientLight(0xffffff, 5);
+const pointLight = new THREE.PointLight(0xffffff, 2);
+pointLight.position.set(2, 2, 2);
+const ambientLight = new THREE.AmbientLight(0xffffff, 2);
 scene.add(pointLight, ambientLight);
 
 renderer.render(scene, camera);
 
-// Define textMesh
+// Define textMesh - spinning word
 let textMesh;
 
 const loader = new FontLoader();
@@ -57,7 +51,7 @@ loader.load('https://threejs.org/examples/fonts/optimer_regular.typeface.json', 
         bevelSegments: 5
     });
 
-    const textMaterial = new THREE.MeshBasicMaterial({ color: 0x0f56d1 });
+    const textMaterial = new THREE.MeshBasicMaterial({ color: 0x821591 });
     textMesh = new THREE.Mesh(textGeometry, textMaterial);
 
     textMesh.position.set(-5, 0, 0);
@@ -79,6 +73,7 @@ function addStar() {
     scene.add(star);
 }
 
+// amount of stars
 Array(400).fill().forEach(addStar);
 
 // Set background texture
@@ -89,7 +84,7 @@ scene.background = spaceTexture;
 const chelsTexture = new THREE.TextureLoader().load('images/chels.jpg');
 const chels = new THREE.Mesh(
     new THREE.BoxGeometry(3, 3, 3),
-    new THREE.MeshBasicMaterial({ map: chelsTexture })
+    new THREE.MeshBasicMaterial({ map: chelsTexture }) //covers box with photo
 );
 scene.add(chels);
 chels.position.z = 45;
@@ -103,7 +98,7 @@ const normalTexture = new THREE.TextureLoader().load('images/texture2.jpg');
 const tex = new THREE.Mesh(
     new THREE.SphereGeometry(3, 32, 32),
     new THREE.MeshStandardMaterial({ map: texTexture,
-        normalMap: normalTexture })
+        normalMap: normalTexture }) //creates actual texture on image
 );
 scene.add(tex);
 
@@ -113,16 +108,16 @@ tex.position.setX(-15);
 // Move camera on scroll
 function moveCamera() {
     const t = document.body.getBoundingClientRect().top;
-    torus.rotation.x += 0.05;
+    torus.rotation.x += 0.005;
     torus.rotation.y += 0.005;
-    torus.rotation.z += 0.05;
+    torus.rotation.z += 0.005;
 
-    chels.rotation.y += 0.05;
-    chels.rotation.z += 0.05;
+    chels.rotation.y += 0.005;
+    chels.rotation.z += 0.005;
 
-    tex.rotation.x += 0.05;
+    tex.rotation.x += 0.005;
     tex.rotation.y += 0.005;
-    tex.rotation.z += 0.05;
+    tex.rotation.z += 0.005;
 
 
     if (textMesh) {
@@ -130,7 +125,7 @@ function moveCamera() {
         textMesh.rotation.y += 0.005;
     }
 
-    camera.position.z = t * -0.01;
+    camera.position.z = t * -0.01;  //position of camera
     camera.position.x = t * -0.0002;
     camera.rotation.y = t * -0.0002;
 }
