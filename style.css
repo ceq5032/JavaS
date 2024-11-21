@@ -14,7 +14,7 @@ html{
   -moz-osx-font-smoothing: grayscale;
 }
 
-#bg {
+.container {
   position: relative;
   width: 100vh;
   height: 100vh;
@@ -24,7 +24,7 @@ html{
   position: absolute;
 }
 
-canvas{
+#bg{
   position:fixed;
   width: 100vh;
   height: 100vh;
