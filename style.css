@@ -14,7 +14,7 @@ html{
   -moz-osx-font-smoothing: grayscale;
 }
 
-.container {
+#bg {
   position: relative;
   width: 100vh;
   height: 100vh;
