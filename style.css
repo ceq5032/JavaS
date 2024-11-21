@@ -26,9 +26,8 @@ html{
 
 canvas{
   position:fixed;
-  width: 0;
-  height: 0;
-  border: solid 1px red;
+  width: 100vh;
+  height: 100vh;
 
 }
 

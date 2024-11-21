@@ -1,7 +1,8 @@
-import * as THREE from 'three';
+import * as THREE from 'https://cdn.skypack.dev/three@0.128.0/build/three.module.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
+import {GLTFLoader} from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/GLTFLoader.js';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -24,9 +25,9 @@ const torus = new THREE.Mesh(geometry, material);
 scene.add(torus);
 
 // Lighting setup
-const pointLight = new THREE.PointLight(0xffffff, 5);
-pointLight.position.set(5, 5, 5);
-const ambientLight = new THREE.AmbientLight(0xffffff, 5);
+const pointLight = new THREE.PointLight(0xffffff, 2);
+pointLight.position.set(2, 2, 2);
+const ambientLight = new THREE.AmbientLight(0xffffff, 2);
 scene.add(pointLight, ambientLight);
 
 renderer.render(scene, camera);
@@ -50,7 +51,7 @@ loader.load('https://threejs.org/examples/fonts/optimer_regular.typeface.json', 
         bevelSegments: 5
     });
 
-    const textMaterial = new THREE.MeshBasicMaterial({ color: 0x0f56d1 });
+    const textMaterial = new THREE.MeshBasicMaterial({ color: 0x821591 });
     textMesh = new THREE.Mesh(textGeometry, textMaterial);
 
     textMesh.position.set(-5, 0, 0);
