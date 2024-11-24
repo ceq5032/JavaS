@@ -129,3 +129,39 @@ blockquote{
     grid-column: 1 / -1;
   }
 }
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+footer nav li {
+  display: inline-block;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .social-media a {
+  color: #fff;
+
+}
