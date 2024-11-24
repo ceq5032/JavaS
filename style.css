@@ -42,7 +42,7 @@ html{
 .grid {
   display: grid;
   height: 100vh;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(13, 1fr);
   grid-template-rows: 100px;
 }
 
@@ -50,8 +50,8 @@ body {
   width: 100vh;
   color: whitesmoke;
   position: absolute;
-  margin: 0 auto;
   padding: 120px 0;
+  margin-left: 10rem;
 }
 
 h1, h2, h3, blockquote {
@@ -61,35 +61,46 @@ h1, h2, h3, blockquote {
 }
 
 section{
-  grid-column: 2 /  span 8;
+grid-column: 2 /  span 8;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.25);;
   font-size: 1.5rem;
   line-height: 1.5;
-  margin-top: 20rem;
-  margin-bottom:40rem;
+  margin-top: 10rem;
+  margin-bottom:45rem;
 }
 
 .two{
-  grid-column: 2 /  span 9;
+grid-column: 2 / span 9;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.25);;
   font-size: 1.5rem;
   line-height: 1.5;
   margin-top: 5rem;
   margin-bottom:40rem;
+  text-shadow: #242424 2px 1px 1px;
 }
 
 blockquote{
   padding: 0;
   grid-column: 2 / span 10;
-  margin: 15rem;
+  margin: 1rem;
   font-size: 4rem;
+  text-shadow: #242424 2px 1px 1px;
+}
+
+.secondary{
+  padding: 0;
+  grid-column: 2 / span 11;
+  font-size: 1rem;
+  text-shadow: #242424 2px 1px 1px;
+  margin-bottom: 45rem;
+
 }
 
 .project{
-  grid-column: 2 / span 11;
   padding: 1rem;
+  grid-column: 2 / span 12;
   background: rgba(255, 255, 255, 0.25);;
   font-size: 1.5rem;
   line-height: 1.5;
@@ -100,8 +111,8 @@ blockquote{
 
 
 .left{
-  grid-column: 2 / span 12;
   padding: 1rem;
+  grid-column: 2 / span 13;
   background: rgba(255, 255, 255, 0.25);;
   font-size: 1.5rem;
   line-height: 1.5;
