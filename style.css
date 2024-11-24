@@ -153,15 +153,17 @@ footer nav ul {
 }
 
 footer nav li {
-  display: inline-block;
+  display: flex;
 }
 
 footer a {
+  display: flex;
   color: #fff;
   text-decoration: none;
 }
 
 footer .social-media a {
   color: #fff;
+  display: flex;
 
 }
