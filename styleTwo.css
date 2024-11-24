@@ -1,0 +1,30 @@
+html{
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: left;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-image: url(images/landingBack2.jpg);
+    background-size: cover;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1{
+    font-size: 4rem;
+    text-align: center;
+    padding: 20px;
+    text-shadow: #242424 2px 1px 1px;
+}
+
+p{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 45px;
+    text-shadow: #242424 2px 1px 1px;
+
+}
