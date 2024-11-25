@@ -10,6 +10,25 @@ const renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector('#bg'),
 });
 
+// Select the button
+const goToTimelineButton = document.getElementById('goToTimeline');
+
+// Add click event
+goToTimelineButton.addEventListener('click', () => {
+    window.location.href = 'timeLine.html';
+});
+
+
+goToTimelineButton.addEventListener('click', () => {
+    document.body.style.transition = 'opacity 0.5s ease';
+    document.body.style.opacity = '0';
+    setTimeout(() => {
+        window.location.href = 'timeline.html';
+    }, 500);
+});
+
+
+
 //to resize with screen
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -18,7 +37,7 @@ camera.position.setZ(30);
 
 
 
-// Create a torus geometry and material
+//Create a torus geometry and material
 //const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
 //const material = new THREE.MeshStandardMaterial({ color: 0x6d180f });
 //const torus = new THREE.Mesh(geometry, material);
@@ -53,18 +72,20 @@ loader.load('https://threejs.org/examples/fonts/optimer_regular.typeface.json', 
         bevelSize: 0.1,
         bevelOffset: 0,
         bevelSegments: 0
-    });
+   });
 
     const textMaterial = new THREE.MeshBasicMaterial({ color: 0xa21818 });
     textMesh = new THREE.Mesh(textGeometry, textMaterial);
 
     textMesh.position.set(-8, 0, 5);
     scene.add(textMesh);
-}, undefined, function (error) {
-    console.error("Font failed to load", error);
-});
+    textMesh.visible = false;  //turns off word.
 
-const controls = new OrbitControls(camera, renderer.domElement);
+ }, undefined, function (error) {
+    console.error("Font failed to load", error);
+ });
+
+ const controls = new OrbitControls(camera, renderer.domElement);
 
 
 
@@ -124,7 +145,7 @@ dStar.position.z = 55;
 dStar.position.setX(-20);
 
 
-//tie fighter made in blender
+//tie fighter that I made in blender
 const loader1 = new GLTFLoader();
 
 loader1.load('images/tieFighter3.glb', (gltf) => {
@@ -145,7 +166,7 @@ loader1.load('images/tieFighter3.glb', (gltf) => {
     console.error('An error occurred while loading the model.', error); 1
 });
 
-//tie fighter made in blender
+//tie fighter that I made in blender
 const loader2 = new GLTFLoader();
 
 loader2.load('images/tieFighter3.glb', (gltf) => {
@@ -170,7 +191,7 @@ loader2.load('images/tieFighter3.glb', (gltf) => {
 function moveCamera() {
     const t = document.body.getBoundingClientRect().top;
    // torus.rotation.x += 0.005;
-    //torus.rotation.y += 0.005;
+   // torus.rotation.y += 0.005;
    // torus.rotation.z += 0.005;
 
     darthV.rotation.x += 0.003;

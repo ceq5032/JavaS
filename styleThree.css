@@ -1,0 +1,143 @@
+
+html {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: left;
+    color-scheme: light dark;
+    background-color: #242424;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.timeline {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    overflow-y: scroll;
+    height: 600px;
+}
+
+
+.event {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    padding: 20px;
+    background-color: rgba(50, 50, 50, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    color: #f1f1f1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.event:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(234, 39, 69, 0.8);
+}
+
+
+.event span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-50%);
+    background-color: rgba(139, 23, 23, 0.55);
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.event::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: 2px;
+    height: 100%;
+    background-color: rgba(139, 23, 23, 0.55);
+}
+
+
+#goToLanding {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: rgba(200, 50, 50, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+#goToLanding:hover {
+    background-color: rgba(234, 39, 69, 0.8);
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+footer nav li {
+    display: flex;
+}
+
+footer a {
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .social-media {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+footer .social-media a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+footer .social-media a:hover {
+    color: #ff4081;
+}
+
+
