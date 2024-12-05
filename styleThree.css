@@ -37,12 +37,14 @@ html {
     box-shadow: 0 4px 10px rgba(172, 11, 35, 0.8);
     color: #f1f1f1;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
 
 .event:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(234, 39, 69, 0.8);
+
 }
 
 
@@ -57,6 +59,7 @@ html {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+
 }
 
 
@@ -68,6 +71,7 @@ html {
     width: 2px;
     height: 100%;
     background-color: rgba(139, 23, 23, 0.55);
+
 }
 
 
@@ -179,7 +183,7 @@ footer .social-media img:hover {
     height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
-    z-index: 99999;
+    z-index: 9999999;
 }
 
 .event:hover .popup {
