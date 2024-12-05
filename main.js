@@ -109,7 +109,7 @@ const spaceTexture = new THREE.TextureLoader().load('images/blackSpace.jpg');
 scene.background = spaceTexture;
 
 //anakin
-const anakinTexture = new THREE.TextureLoader().load('images/anakin.jpg');
+const anakinTexture = new THREE.TextureLoader().load('images/anakin2.jpg');
 const anakin = new THREE.Mesh(
     new THREE.BoxGeometry(3, 3, 3),
     new THREE.MeshBasicMaterial({ map: anakinTexture }) //covers box with photo
@@ -249,3 +249,5 @@ function animate() {
 }
 
 animate();
+
+

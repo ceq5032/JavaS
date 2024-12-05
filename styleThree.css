@@ -20,9 +20,10 @@ html {
     padding: 20px;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 10px rgba(139, 23, 23, 0.85);
     overflow-y: scroll;
     height: 600px;
+    z-index: 1;
 }
 
 
@@ -33,7 +34,7 @@ html {
     padding: 20px;
     background-color: rgba(50, 50, 50, 0.8);
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 10px rgba(172, 11, 35, 0.8);
     color: #f1f1f1;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -70,23 +71,22 @@ html {
 }
 
 
-#goToLanding {
+body #goToLanding {
     position: fixed;
     top: 20px;
     left: 20px;
     padding: 15px 30px;
     font-size: 18px;
-    background-color: rgba(200, 50, 50, 0.8);
+    background-color: rgba(139, 23, 23, 0.55);
     color: white;
     border: none;
     border-radius: 5px;
-    z-index: 100;
+    z-index: 3;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-
-#goToLanding:hover {
+body #goToLanding:hover {
     background-color: rgba(234, 39, 69, 0.8);
 }
 
@@ -99,10 +99,12 @@ footer {
     height: 3rem;
     background-color: rgba(0, 0, 0, 0.8);
     color: rgb(255, 255, 255);
-    padding: 5px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    padding: 0 10px;
+    gap: 20px;
+    z-index: 4;
 }
 
 footer nav ul {
@@ -110,34 +112,81 @@ footer nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    align-items: center;
 }
 
 footer nav li {
     display: flex;
+    margin-right: 15px;
 }
 
 footer a {
     display: flex;
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
+
+footer a:hover {
+    color: #570420;
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+
 
 footer .social-media {
     display: flex;
     align-items: center;
-    margin-top: 10px;
 }
 
 footer .social-media a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 2rem;
+    display: inline-block;
     margin-left: 10px;
-    transition: color 0.3s ease;
 }
 
-footer .social-media a:hover {
-    color: #ff4081;
+footer .social-media img {
+    width: 30px;
+    height: auto;
+    transition: transform 0.3s ease;
 }
+
+footer .social-media img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    background-color: rgba(50, 50, 50, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    color: #f1f1f1;
+    font-size: 14px;
+    z-index: 9999999;
+    display: none;
+    text-align: left;
+}
+
+.popup img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    z-index: 99999;
+}
+
+.event:hover .popup {
+    display: block;
+}
+
+
+
 
 
