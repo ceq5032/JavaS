@@ -4,6 +4,8 @@ import { FontLoader, TextGeometry } from 'https://cdnjs.cloudflare.com/ajax/libs
 import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/GLTFLoader.js';
 
 
+
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({
@@ -33,7 +35,6 @@ goToTimelineButton.addEventListener('click', () => {
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 camera.position.setZ(30);
-
 
 
 
@@ -102,7 +103,7 @@ function addStar() {
 }
 
 // amount of stars
-Array(400).fill().forEach(addStar);
+Array(450).fill().forEach(addStar);
 
 // Set background texture
 const spaceTexture = new THREE.TextureLoader().load('images/blackSpace.jpg');
@@ -205,6 +206,8 @@ function moveCamera() {
     anakin.rotation.x += 0.003;
     anakin.rotation.y += 0.003;
     anakin.rotation.z += 0.003;
+
+   
 
 
     if (textMesh) {

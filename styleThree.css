@@ -1,8 +1,10 @@
 
-html {
+html, body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
     font-weight: 400;
+    top: 0;
+    right: 0;
     text-align: left;
     color-scheme: light dark;
     background-color: #242424;
@@ -10,20 +12,32 @@ html {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
 
+}
 
 .timeline {
     position: relative;
     width: 80%;
     margin: 0 auto;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(139, 23, 23, 0.85);
-    overflow-y: scroll;
-    height: 600px;
     z-index: 1;
+}
+
+h1 {
+    text-align: center;
+    text-underline: rgba(36, 36, 36, 0.47);
+    text-shadow: -1px -1px 0 rgb(255, 255, 255);
+    padding-top: 30px;
+    font-size: 3em;
+}
+
+
+ h2 {
+     text-underline: rgba(255, 255, 255, 0.09);
+   text-shadow: #ffffff 2px 1px 1px;
+     font-size: 1.9em;
 }
 
 
@@ -32,7 +46,6 @@ html {
     margin-top: 30px;
     margin-bottom: 60px;
     padding: 20px;
-    background-color: rgba(50, 50, 50, 0.8);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(172, 11, 35, 0.8);
     color: #f1f1f1;
@@ -44,6 +57,7 @@ html {
 .event:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(234, 39, 69, 0.8);
+    z-index: 4;
 
 }
 
@@ -59,6 +73,7 @@ html {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+    z-index: 4;
 
 }
 
@@ -81,7 +96,7 @@ body #goToLanding {
     left: 20px;
     padding: 15px 30px;
     font-size: 18px;
-    background-color: rgba(139, 23, 23, 0.55);
+    background-color: rgba(139, 23, 23, 0.8);
     color: white;
     border: none;
     border-radius: 5px;
@@ -99,7 +114,7 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 3rem;
     background-color: rgba(0, 0, 0, 0.8);
     color: rgb(255, 255, 255);
@@ -158,24 +173,22 @@ footer .social-media img:hover {
     transform: scale(1.1);
 }
 
-
-
-
 .popup {
     position: fixed;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 450px;
-    background-color: rgba(50, 50, 50, 0.9);
+    background-color: black;
     border-radius: 8px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
-    padding: 20px;
+    box-shadow: 0 6px 15px rgb(87, 4, 32);
+    padding: 20px 20px;
     color: #f1f1f1;
-    font-size: 14px;
+    font-size: 18px;
     z-index: 9999999;
     display: none;
     text-align: left;
+
 }
 
 .popup img {
@@ -189,6 +202,8 @@ footer .social-media img:hover {
 .event:hover .popup {
     display: block;
 }
+
+
 
 
 

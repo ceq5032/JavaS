@@ -1,5 +1,5 @@
 
-html {
+:root {
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -21,17 +21,15 @@ html {
   overflow: hidden;
 }
 
-
 .container canvas, .overlay {
   position: absolute;
 }
+
 
 #bg {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
 }
 
 
@@ -233,8 +231,12 @@ footer .social-media img:hover {
 }
 
 
-  header, section, blockquote {
-    grid-column: 1 / -1;
-  }
+header, section, blockquote {
+  grid-column: 1 / -1;
+}
+
+
+
+
 
 
